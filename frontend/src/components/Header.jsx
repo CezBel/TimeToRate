@@ -1,21 +1,48 @@
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
+import { useEffect } from 'react';
+import { LinkContainer } from 'react-router-bootstrap';
 import logo from '../assets/TTRLOGO.png';
 
 
 const Header = () => {
+
+  useEffect(() => {
+    window.onscroll = function() {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (document.documentElement.scrollTop > 50) {
+        document.getElementById("img").style.width = '50px';
+        document.getElementById("img").style.height = '50px';
+      
+      } else {
+        document.getElementById("img").style.width = '100px';
+        document.getElementById("img").style.height = '100px';
+      }
+    }
+  }, []);
+
   return (
-    <header>
+    <header id='header'>
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
-          <Navbar.Brand className='mx-3' href='/'>
-            <img src={logo} alt="TimeToRete" />
+        <LinkContainer to='/'>
+          <Navbar.Brand className='mx-3'>
+            <img id='img' src={logo} alt="TimeToRete" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls='basic-navbar-nav'/>
-          <Navbar.Collapse id='basic-navbar-nav'>
-            <Nav className='ms-auto mx-5'>
-              <Nav.Link href='/login'>Log In</Nav.Link>
-              <Nav.Link href='/signup'>Sign Up</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
+        </LinkContainer>
+        <Navbar.Toggle aria-controls='basic-navbar-nav' />
+        <Navbar.Collapse id='basic-navbar-nav'>
+          <Nav className='ms-auto mx-5'>
+            <LinkContainer to='/login'>
+              <Nav.Link>Log In</Nav.Link>
+            </LinkContainer>
+
+            <LinkContainer to='/signup'>
+              <Nav.Link>Sign Up</Nav.Link>
+            </LinkContainer>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
     </header>
   );
