@@ -1,11 +1,22 @@
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Row, Col, Image, ListGroup, Button, Card } from 'react-bootstrap';
-import businesses from '../businesses';
+import axios from 'axios';
 import Rating from '../components/Rating';
 
 const BusinessScreen = () => {
+  const [business, setBusiness] = useState({});
+
   const { id: businessId } = useParams();
-  const business = businesses.find((b) => b._id === businessId);
+  
+  useEffect(() => {
+    const getBusiness = async () => {
+      const { data } = await axios.get(`/api/businesses/${businessId}`);
+      setBusiness(data);
+    };
+    getBusiness();
+  },[businessId])
+  
   
   return (
     <>
@@ -45,7 +56,7 @@ const BusinessScreen = () => {
 
             <ListGroup.Item className='py-1'>
               <h5>Address:</h5>
-              <h6>{`${business.address.addressLocality}, ${business.address.streetAddress}, ${business.address.postalCode}`}</h6>
+              <h6>{`${business.address?.addressLocality}, ${business.address?.streetAddress}, ${business.address?.postalCode}`}</h6>
             </ListGroup.Item>
 
             <ListGroup.Item style={{fontSize: '20px'}}>

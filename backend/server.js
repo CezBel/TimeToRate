@@ -1,13 +1,15 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import connectDB from './config/db.js';
 dotenv.config();
 import businesses from './data/businesses.js';
+const PORT = process.env.PORT;
+
+connectDB();
 
 const app = express();
 
-const PORT = process.env.PORT;
-
-app.get('/', (req, res) => {
+app.get('/api/businesses', (req, res) => {
   res.json(businesses);
 });
 
@@ -19,4 +21,3 @@ app.get('/api/businesses/:id', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-

@@ -1,5 +1,4 @@
 import { Navbar, Nav } from 'react-bootstrap';
-import { useEffect } from 'react';
 import { LinkContainer } from 'react-router-bootstrap';
 import logo from '../assets/TTRLOGO.png';
 
@@ -7,22 +6,20 @@ import logo from '../assets/TTRLOGO.png';
 const Header = () => {
 
   // shrink header on scroll
-  useEffect(() => {
-    window.onscroll = function() {
-      scrollFunction();
-    };
+  window.onscroll = function () {
+    scrollFunction();
+  };
 
-    function scrollFunction() {
-      if (document.documentElement.scrollTop > 50) {
-        document.getElementById("img").style.width = '50px';
-        document.getElementById("img").style.height = '50px';
-      
-      } else {
-        document.getElementById("img").style.width = '100px';
-        document.getElementById("img").style.height = '100px';
-      }
+  const scrollFunction = () => {
+    if (document.documentElement.scrollTop > 50) {
+      document.getElementById("img").style.width = '50px';
+      document.getElementById("img").style.height = '50px';
+
+    } else {
+      document.getElementById("img").style.width = '100px';
+      document.getElementById("img").style.height = '100px';
     }
-  }, []);
+  };
 
   return (
     <header id='header'>

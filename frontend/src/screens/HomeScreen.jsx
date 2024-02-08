@@ -1,8 +1,19 @@
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 import { Row, Col } from 'react-bootstrap';
-import businesses from '../businesses';
 import Business from '../components/Business';
 
 const HomeScreen = () => {
+  const [businesses, setBusinesses] = useState([]);
+
+  useEffect(() => {
+    const getBusinesses = async () => {
+      const { data} = await axios.get('/api/businesses');
+      setBusinesses(data);
+    };
+    getBusinesses();
+  }, []);
+
   return (
     <>
       <h1>Browse Businesses</h1>
