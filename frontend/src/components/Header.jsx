@@ -6,6 +6,7 @@ import logo from '../assets/TTRLOGO.png';
 
 const Header = () => {
 
+  // shrink header on scroll
   useEffect(() => {
     window.onscroll = function() {
       scrollFunction();

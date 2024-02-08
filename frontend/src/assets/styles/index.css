@@ -29,6 +29,13 @@ footer {
   color: #ff0000c8;
 }
 
+.businessDescription{
+  font-size: larger;
+  background-color: #ff0000c8;
+  padding: 5px;
+  border-radius: 8px;
+}
+
 .rating-text {
   font-size: 0.8rem;
   font-weight: 600;
