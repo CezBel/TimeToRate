@@ -1,10 +1,10 @@
 const business = [
   {
-    _id: '1',
     name: 'Larana',
+    description: 'aaa',
     image: '/images/place1.jpeg',
-    sub_category: 'fast food',
     category: 'resturant',
+    sub_category: 'fast food',
     address: {
       addressLocality: 'ashkelon',
       streetAddress: 'ben gurion 12',
@@ -17,11 +17,11 @@ const business = [
     numReviews: 12,
   },
   {
-    _id: '2',
     name: 'Master Chef',
+    description: 'aaa',
     image: '/images/place2.jpeg',
-    sub_category: 'italian food',
     category: 'resturant',
+    sub_category: 'italian food',
     address: {
       addressLocality: 'ashkelon',
       streetAddress: 'ben gurion 12',
@@ -34,11 +34,11 @@ const business = [
     numReviews: 8,
   },
   {
-    _id: '3',
     name: 'Fauget',
+    description: 'aaa',
     image: '/images/place3.jpeg',
-    sub_category: 'franch food',
     category: 'resturant',
+    sub_category: 'franch food',
     address: {
       addressLocality: 'ashkelon',
       streetAddress: 'ben gurion 12',
@@ -51,11 +51,11 @@ const business = [
     numReviews: 12,
   },
   {
-    _id: '4',
     name: 'Good Kitchen',
+    description: 'aaa',
     image: '/images/place4.jpeg',
-    sub_category: 'italian food',
     category: 'resturant',
+    sub_category: 'italian food',
     address: {
       addressLocality: 'ashkelon',
       streetAddress: 'ben gurion 12',
@@ -68,11 +68,11 @@ const business = [
     numReviews: 12,
   },
   {
-    _id: '5',
     name: 'Aldenaire',
+    description: 'aaa',
     image: '/images/place5.jpeg',
-    sub_category: 'grocery store',
     category: 'store',
+    sub_category: 'grocery store',
     address: {
       addressLocality: 'ashkelon',
       streetAddress: 'ben gurion 12',
@@ -85,11 +85,11 @@ const business = [
     numReviews: 10,
   },
   {
-    _id: '6',
     name: 'Organic Grocery',
+    description: 'aaa',
     image: '/images/place6.jpeg',
-    sub_category: 'grocery store',
     category: 'store',
+    sub_category: 'grocery store',
     address: {
       addressLocality: 'ashkelon',
       streetAddress: 'ben gurion 12',
@@ -102,12 +102,11 @@ const business = [
     numReviews: 12,
   },
   {
-    _id: '7',
     name: 'Big Bite Donuts',
     description: 'Best Dounuts in town, established in 1978, our dounuts recipy runs in the familly in years.',
     image: '/images/place7.jpeg',
-    sub_category: 'sweets',
     category: 'resturant',
+    sub_category: 'sweets',
     address: {
       addressLocality: 'ashkelon',
       streetAddress: 'ben gurion 12',
@@ -120,11 +119,11 @@ const business = [
     numReviews: 1,
   },
   {
-    _id: '8',
     name: 'Twin Tails',
+    description: 'aaa',
     image: '/images/place8.jpeg',
-    sub_category: 'pet store',
     category: 'store',
+    sub_category: 'pet store',
     address: {
       addressLocality: 'ashkelon',
       streetAddress: 'ben gurion 12',

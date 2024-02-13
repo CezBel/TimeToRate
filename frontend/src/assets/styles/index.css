@@ -6,13 +6,18 @@ footer {
   border-top: 1px solid black;
 }
 
+.loader {
+  position: fixed;
+  left: 50%;
+}
+
 #header {
   top: 0;
   z-index: 1;
   transition: 0.2s;
   position: fixed;
   width: 100%;
-  
+
 }
 
 #img {
@@ -29,7 +34,7 @@ footer {
   color: #ff0000c8;
 }
 
-.businessDescription{
+.businessDescription {
   font-size: larger;
   background-color: #ff0000c8;
   padding: 5px;
@@ -43,9 +48,12 @@ footer {
 }
 
 .business-title {
-  overflow: hidden; /* Hide overflow content */
-  text-overflow: ellipsis; /* Add ellipsis for long text */
-  white-space: nowrap; /* Prevent wrapping */
+  overflow: hidden;
+  /* Hide overflow content */
+  text-overflow: ellipsis;
+  /* Add ellipsis for long text */
+  white-space: nowrap;
+  /* Prevent wrapping */
 }
 
 table td,

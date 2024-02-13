@@ -1,22 +1,20 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 import connectDB from './config/db.js';
 dotenv.config();
-import businesses from './data/businesses.js';
+import businessRoutes from './routes/businessRoutes.js';
 const PORT = process.env.PORT;
 
 connectDB();
 
 const app = express();
 
-app.get('/api/businesses', (req, res) => {
-  res.json(businesses);
-});
+app.use('/api/businesses', businessRoutes);
 
-app.get('/api/businesses/:id', (req, res) => {
-  const business = businesses.find((b) => b._id === req.params.id);
-  res.json(business);
-});
+// errorHandler
+app.use(notFound);
+app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
