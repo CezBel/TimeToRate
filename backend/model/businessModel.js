@@ -17,7 +17,15 @@ const reviewSchema = new mongoose.Schema({
   comment: {
     type: String,
     required: true,
-  }
+  },
+  business: {
+    type: String,
+    required: true
+  },
+  businessName: {
+    type: String,
+    required: true
+  },
 }, {
   timestamps: true,
 });

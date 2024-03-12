@@ -4,7 +4,7 @@ const Loader = () => {
   return (
     <HashLoader  
       className='loader'
-      size={150}
+      size={70}
       color='#ffc900' 
     />
   );

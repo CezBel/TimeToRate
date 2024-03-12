@@ -15,7 +15,7 @@ const router = express.Router();
 
 router.post('/login', loginUser);
 router.post('/register', registerUser);
-router.post('/logout', protect, logoutUser);
+router.post('/logout', logoutUser);
 router.route('/profile').get(protect, getUserProfile).put(protect, updateUserProfile);
 
 // Admin Routes
